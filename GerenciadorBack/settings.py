@@ -1,3 +1,4 @@
+#rezar
 """
 Django settings for GerenciadorBack project.
 
