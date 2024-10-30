@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+u+1*cvx@#52k(xoxh0o=0+_u13#96$=0t@^^kbe@*^flum_4$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,9 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
+    'api',
+]
+
+COS_ORIGIN_ALLOW = [
+    "https://teste-static-file.onrender.com"
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.security.SecurityMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
