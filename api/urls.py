@@ -1,3 +1,4 @@
+# 100% de fé
 from . import views
 from django.urls import path
 
